@@ -1,8 +1,12 @@
 node {
     checkout scm
 
+    sh '''
+        ls -lhrt
+    '''
+
     def rootDir = pwd()
-    def exampleModule = load "${rootDir}@script/Example.Groovy "
+    def exampleModule = load "${rootDir}/Example.Groovy"
     exampleModule.exampleMethod()
     exampleModule.otherExampleMethod()
 }
