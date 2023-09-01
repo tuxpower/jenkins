@@ -1,11 +1,7 @@
+@Library('shared-library')_
+
 node {
     checkout scm
 
-    sh '''
-        ls -lhrt
-    '''
-
-    def rootDir = pwd()
-    def exampleModule = load "${rootDir}/Example.Groovy"
-    exampleModule.exampleMethod()
+    example()
 }
