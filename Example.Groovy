@@ -1,9 +1,5 @@
-import com.cloudbees.plugins.credentials.CredentialsStore
-
 def exampleMethod() {
-
-  CredentialsStore cs
  
-  cs.getDomains()
+  cs = com.cloudbees.plugins.credentials.CredentialsStore.getDomains()
   print cs
 }
