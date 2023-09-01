@@ -1,13 +1,4 @@
-/*def exampleMethod() {
-    //do something
-    echo 'zzzzzzzzzzz'
-}
-
-def otherExampleMethod() {
-    //do something else
-    echo 'xx'
-}
-return this*/
+#!/usr/bin/env groovy
 
 def exampleMethod() {
  
