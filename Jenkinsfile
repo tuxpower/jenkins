@@ -4,5 +4,5 @@ import com.cloudbees.plugins.credentials.CredentialsStore
 node {
     checkout scm
 
-    example()
+    credentials()
 }
