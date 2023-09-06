@@ -3,5 +3,6 @@
 node {
     checkout scm
 
-    credentials()
+    creds = credentials()
+    showcreds(creds)
 }
