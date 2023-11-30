@@ -10,7 +10,7 @@ jobs:
     - shell: bash
       env:
         #SUPER_SECRET: ${{ secrets.REPO_SECRET }}
-        MY_VAR: ${{ env.MY_DEV_SECRET }}
+        MY_VAR: ${{ secrets.MY_SECRET }}
       run: |
         #echo $SUPER_SECRET >> secrets.txt
         echo $MY_VAR >> secrets.txt
