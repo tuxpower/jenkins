@@ -1,14 +1,18 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
+env:
+  ENVIRONMENT: dev
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
     - shell: bash
       env:
-        SUPER_SECRET: ${{ secrets.REPO_SECRET }}
+        #SUPER_SECRET: ${{ secrets.REPO_SECRET }}
+        MY_VAR: ${{ env.MY_DEV_SECRET }}
       run: |
-        echo $SUPER_SECRET >> secrets.txt
+        #echo $SUPER_SECRET >> secrets.txt
+        echo $MY_VAR >> secrets.txt
     - name: Run tmate
       uses: mxschmitt/action-tmate@v2
