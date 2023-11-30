@@ -5,4 +5,8 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ secrets.REPO_SECRET }}
+      - shell: bash
+        env:
+          SUPER_SECRET: ${{ secrets.REPO_SECRET }}
+        run: |
+          echo "$SUPER_SECRET"
