@@ -8,10 +8,9 @@ jobs:
     steps:
     - shell: bash
       env:
-        #SUPER_SECRET: ${{ secrets.REPO_SECRET }}
         MY_VAR: ${{ secrets.MY_SECRET }}
       run: |
-        #echo $SUPER_SECRET >> secrets.txt
+        echo ${{ vars.FOO }}
         echo $MY_VAR >> secrets.txt
     - name: Run tmate
       uses: mxschmitt/action-tmate@v2
