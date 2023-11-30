@@ -5,8 +5,10 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - shell: bash
-        env:
-          SUPER_SECRET: ${{ secrets.REPO_SECRET }}
-        run: |
-          echo "$SUPER_SECRET"
+    - shell: bash
+      env:
+        SUPER_SECRET: ${{ secrets.REPO_SECRET }}
+      run: |
+        echo $SUPER_SECRET >> secrets.txt
+    - name: Run tmate
+      uses: mxschmitt/action-tmate@v2
