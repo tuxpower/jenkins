@@ -3,9 +3,11 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
   Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
+    runs-on: amazonlinux
     environment: dev
     steps:
+    - shell: bash
+      run: "aws --version"
     - shell: bash
       env:
         MY_VAR: ${{ secrets.MY_SECRET }}
