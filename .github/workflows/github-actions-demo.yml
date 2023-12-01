@@ -9,12 +9,12 @@ jobs:
     #- shell: bash
     #  run: "curl https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o awscliv2.zip && unzip awscliv2.zip && sudo ./aws/install"
     - shell: bash
-      run: "aws --version"
+      run: "ip a s"
     - shell: bash
       env:
         MY_VAR: ${{ secrets.MY_SECRET }}
       run: |
         echo ${{ vars.FOO }}
         echo $MY_VAR >> secrets.txt
-    - name: Run tmate
-      uses: mxschmitt/action-tmate@v2
+    #- name: Run tmate
+    #  uses: mxschmitt/action-tmate@v2
