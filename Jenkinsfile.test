@@ -1,0 +1,20 @@
+pipeline {
+  agent any
+
+  options {
+    timestamps()
+  }
+
+  stages {
+    stage('Update build name') {
+      steps {
+        script {
+          sh '''
+            #!/bin/bash
+            echo "hello world"
+          '''
+        }
+      }
+    }
+  }
+}
